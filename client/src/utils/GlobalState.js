@@ -16,8 +16,10 @@ The Consumer is our means of grabbing and using the data that the Provider holds
 const StoreProvider = ({ value = [], ...props }) => {
     const [state, dispatch] = useProductReducer({
       products: [],
+      cart: [],
+      cartOpen: false,
       categories: [],
-      currentCategory: '',
+      currentCategory: ''
     });
     // use this to confirm it works!
     console.log(state);
